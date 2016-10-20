@@ -28,17 +28,18 @@ int main()
 	cin>>turn[1];
 	//Game loop
 	while(1){
-		//Checking if anyone won
-		if(win){
-			cout<<"Player "<<(!t)+1<<" Wins\n";
-			break;
-		}
+		
 		//Priting game
 		for(int k=0;k<7;k++){
 			for(int l=0;l<7;l++){
 				cout<<grid[k][l];
 			}
 			cout<<endl;
+		}
+		//Checking if anyone won
+		if(win){
+			cout<<"Player "<<(!t)+1<<" Wins\n";
+			break;
 		}
 		cout<<"\nPlayer "<<t+1<<"'s Move\n";
 		// Taking move coordinates
@@ -75,5 +76,6 @@ int main()
 		// Next turn Changing player number
 		t=!t;
 	}
+	return 0;
 	
 }
